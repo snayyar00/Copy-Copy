@@ -1,116 +1,151 @@
-@import url('https://fonts.googleapis.com/css?family=Bungee|Mukta+Malar:300,400,600|Slabo+27px');
+.image {
+   background-color: #490D40;
+   background: url("bgImage.jpg") no-repeat center center;
+   background-size: cover;
+   height: 570px;
+   margin-top: -20px;
 
-html
-{
-	font-family: "Mukta Malar";
+   .heading {
+      color: white;
+      text-align: center;
+      padding-top: 200px;
+   }
+
+   p {
+      text-align: center;
+      padding: 20px 60px;
+
+       .btn {
+         background-color: transparent;
+         color: white;
+         border: 1px solid white;
+         padding: 10px;
+         font-size: 1.2em;
+
+          &:hover {
+             color: #C57ED3;
+             border-color: #C57ED3;
+          }
+      }
+   }
 }
 
-header {
-/*  background-image: url('thomas-litangen-433142.jpg');*/
-  background-size: cover;
-  background-position: center;
-/*  height:200px; */
+.navbar {
+  height: 80px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  z-index: 100;
+  transition: background-color 1s ease 0s;
 }
 
-nav {
-  border-bottom: 10px solid tomato;
-}
 
-.sticky-bar {
-  background-color: white;
-}
+.navbar-default {
 
-body
-{
-	margin:0;
-}
+   .navbar-brand {
+     margin-top: 10px;
+     color: white;
 
-h1 {
-	font-family: "Bungee";
-	font-size: 2rem;
-}
+      &:hover {
+         color: #C57ED3;
+         border: 1px solid #C57ED3;
+      }
+   }
 
-h2
-{
-	font-family: "Slabo 27px";
-	color:tomato;
-}
+  .navbar-nav {
 
-.wrapper
-{
-	max-width: 1000px;
-	margin:auto;
-}
+    > li {
 
-nav button
-{
-	background-color: transparent;
-	border:none;
-	font-size: 1.5rem;
-}
+      > a {
+        color: white;
+        margin: 10px 5px 5px 5px;
 
-.header-image
-{
-	height:200px;
-	width:100%;
-	object-fit: cover;
-}
+      }
+      > a:hover, > a:active, > a:focus {
+        color: #C57ED3;
+        border: 1px solid #C57ED3;
+      }
+      > a:visited {
+        color: #C57ED3;
+        text-decoration: none;
+      }
 
-nav ul
-{
-	padding:0;
-  margin:0;
-	list-style-type: none;
-	font-size: 1.5rem;
-}
+    } //end li
 
-nav ul li
-{
-	padding:1rem;
-	text-align: center;
-}
+    > .active {
 
-form
-{
-	display: none;
-}
+      > a, > a:hover, > a:focus {
+        background-color: transparent;
+        color: #C57ED3;
+      }
 
-aside
-{
-	background-color: lemonchiffon;
-}
+    }
 
-nav a
-{
-	color:tomato;
-	text-decoration: none;
-}
+  } //end .navbar-nav
 
-main, aside
-{
-	padding:1rem;
-}
+  //Collapsed styles
+  .navbar-toggle {
+    border-color: #C57ED3;
 
-/* Desktop */
-@media screen and (min-width: 1000px)
-{
+      &:hover, &:focus {
+        background-color: #490D40;
+      }
 
-  header {
-/*    height: 400px; */
+
+
+      .icon-bar {
+        color: #C57ED3;
+        background-color: #C57ED3;
+
+      }
   }
 
-	nav ul
-	{
-	font-size: 1rem;
-	}
+  .navbar-collapse.collapse.in ul {
+    background-color: #490D40;
+  }
 
-	main
-	{
-		box-sizing: border-box;
-	}
+} //end .navbar-default
 
-	aside
-	{
-		box-sizing: border-box;
-	}
+
+
+/* Solid class attached on scroll past first section */
+
+.navbar.solid {
+  background-color: #490D40;
+  transition: background-color 1s ease 0s;
+  box-shadow: 0 0 4px grey;
+
+    .navbar-brand {
+      color: #C57ED3;
+      transition: color 1s ease 0s;
+    }
+
+    .navbar-nav {
+
+       > li {
+
+          > a {
+            color: #C57ED3;
+            transition: color 1s ease 0s;
+          }
+
+       } //end li
+
+    } //end .navbar-nav
+
+}
+
+.about {
+   background-color: #C57ED3;
+   color: #490D40;
+   height: 600px;
+   text-align: center;
+   margin-top: -20px;
+
+   h2 {
+      padding-top: 220px;
+   }
+   p {
+      padding: 20px 80px;
+   }
 }
