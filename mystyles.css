@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Hairline');
+ @media screen and (min-width: 1000px) {
+
+   .sticky-bar{
+     display: grid;
+     grid-template-columns: max-content 1fr max-content;
+     grid-template-rows: 100px;
+     position: sticky;
+     top: 0;
+     align-items: center;
+     transition:border-width linear 0.9s ;
+
+   }
+   .sticky-bar h1{
+     grid-column: 1/2;
+     grid-row: 1/2;
+     font-family: 'Bungee Hairline', cursive;
+   }
+   #open-search{
+     grid-column: 3/4;
+     grid-row: 1/2;
+   }
+   .sticky-bar ul{
+      grid-column: 2/3;
+      grid-row: 1/2;
+      display: grid;
+      grid-template-columns: repeat(4,max-content);
+      justify-content: flex-end;
+   }
+   .wrapper{
+     display: grid;
+     grid-template-columns:auto 300px;
+     grid-template-rows: 1fr;
+   }
+   main{
+     grid-column: 1/2;
+      grid-row: 1/2;
+   }
+   aside{
+     grid-column: 2/3;
+      grid-row: 1/2;
+
+   }
+
+   .decNav{
+     border-width:1px ;
+   }
+
+
+}
