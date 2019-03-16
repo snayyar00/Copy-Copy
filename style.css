@@ -1,4 +1,4 @@
-.main_h {
+.stickyNav {
   position: fixed;
   top: 0px;
   max-height: 70px;
@@ -7,21 +7,21 @@
   padding-top: 17px;
   background: none;
   overflow: hidden;
-
   transition: all 0.3s;
   opacity: 0;
   top: -100px;
   padding-bottom: 6px;
   font-family: "Montserrat", sans-serif;
+
 }
 @media only screen and (max-width: 766px) {
-  .main_h {
+  .stickyNav {
     padding-top: 10px;
   }
 }
 
 .open-nav {
-  max-height: 400px !important;
+  max-height: 400px ;
 }
 .open-nav .mobile-toggle {
   transform: rotate(-90deg);
@@ -40,54 +40,32 @@
   font-size: 25px;
   color: #8f8f8f;
   text-transform: uppercase;
-  float: left;
+  grid-column: 1/2;
+	grid-row: 1/2;
   display: block;
   margin-top: 0;
   line-height: 1;
   margin-bottom: 10px;
 }
-@media only screen and (max-width: 766px) {
-  .logo {
-    float: none;
-  }
-}
-
 nav {
-  float: right;
-  width: 60%;
-}
-@media only screen and (max-width: 766px) {
-  nav {
-    width: 100%;
-  }
+	grid-column: 3/4;
+	grid-row: 1/2;
+
+  width: 100%;
 }
 nav ul {
   list-style: none;
   overflow: hidden;
   text-align: right;
-  float: right;
-}
-@media only screen and (max-width: 766px) {
-  nav ul {
-    padding-top: 10px;
-    margin-bottom: 22px;
-    float: left;
-    text-align: center;
-    width: 100%;
-  }
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
 }
 nav ul li {
   display: inline-block;
   margin-left: 35px;
   line-height: 1.5;
 }
-@media only screen and (max-width: 766px) {
-  nav ul li {
-    width: 100%;
-    padding: 7px 0;
-    margin: 0;
-  }
-}
+
 nav ul a {
   color: #888888;
   text-transform: uppercase;
@@ -105,7 +83,23 @@ nav ul a {
 
   transition: all 200ms ease-in;
 }
+
+
 @media only screen and (max-width: 766px) {
+  nav ul {
+    padding-top: 10px;
+    margin-bottom: 22px;
+    float: left;
+    text-align: center;
+    width: 100%;
+  }
+
+  nav ul li {
+    width: 100%;
+    padding: 7px 0;
+    margin: 0;
+  }
+
   .mobile-toggle {
     display: block;
   }
@@ -125,6 +119,9 @@ nav ul a {
   margin: 0 auto;
   position: relative;
   padding: 0 2%;
+	display: grid;
+	grid-template-columns: 100px 150px 1fr;
+	grid-template-rows: 1fr;
 }
 
 * {
@@ -170,7 +167,7 @@ p {
   min-height: 500px;
   letter-spacing: 1px;
   font-family: "Montserrat", sans-serif;
-	background-size: auto 100vh;
+	background-size: 100% 100vh;
 }
 .hero h1 {
   font-size: 25px;
