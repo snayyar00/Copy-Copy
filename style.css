@@ -23,10 +23,7 @@
 .open-nav {
   max-height: 400px ;
 }
-.open-nav .mobile-toggle {
-  transform: rotate(-90deg);
 
-}
 
 .sticky {
   background-color: rgba(0, 0, 0, 0.93);
@@ -72,17 +69,7 @@ nav ul a {
   font-size: 12px;
 }
 
-.mobile-toggle {
-  display: none;
-  cursor: pointer;
-  font-size: 20px;
-  position: absolute;
-  right: 22px;
-  top: 0;
-  width: 30px;
 
-  transition: all 200ms ease-in;
-}
 
 
 @media only screen and (max-width: 766px) {
@@ -104,14 +91,7 @@ nav ul a {
     display: block;
   } */
 }
-.mobile-toggle span {
-  width: 30px;
-  height: 4px;
-  margin-bottom: 6px;
-  border-radius: 1000px;
-  background: #8f8f8f;
-  display: block;
-}
+
 
 .row {
   width: 100%;
