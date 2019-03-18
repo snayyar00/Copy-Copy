@@ -14,11 +14,7 @@
   font-family: "Montserrat", sans-serif;
 
 }
-@media only screen and (max-width: 766px) {
-  .stickyNav {
-    padding-top: 10px;
-  }
-}
+
 
 .open-nav {
   max-height: 400px ;
@@ -76,6 +72,7 @@ nav ul a {
 
 
 @media only screen and (max-width: 766px) {
+
   nav ul {
     padding-top: 10px;
     margin-bottom: 22px;
@@ -89,10 +86,15 @@ nav ul a {
     padding: 0 0;
     margin: 0;
   }
-
-  /* .mobile-toggle {
+nav{
+  display: block;
+}
+   .mobile-toggle {
     display: block;
-  } */
+  }
+  .stickyNav {
+    padding-top: 10px;
+  }
 }
 
 
