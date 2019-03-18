@@ -43,17 +43,20 @@
   margin-top: 0;
   line-height: 1;
   margin-bottom: 10px;
+  padding-left: 10px;
 }
 nav {
-	grid-column: 3/4;
+	grid-column: 4/5;
 	grid-row: 1/2;
 
+padding-right: 2%;
   width: 100%;
+  justify-content: center;
 }
 nav ul {
   list-style: none;
   overflow: hidden;
-  text-align: right;
+  text-align: center;
 	display: grid;
 	grid-template-columns: repeat(4,1fr);
 }
@@ -95,12 +98,12 @@ nav ul a {
 
 .row {
   width: 100%;
-  max-width: 940px;
-  margin: 0 auto;
+  /* max-width: 940px; */
+  margin: 0 0;
   position: relative;
-  padding: 0 2%;
+  padding: 0 0;
 	display: grid;
-	grid-template-columns: 100px 150px 1fr;
+	grid-template-columns: 100px 150px 200px 1fr;
 	grid-template-rows: 1fr;
 }
 
@@ -113,6 +116,7 @@ body {
   background: white;
   font-family: "Cardo", serif;
   font-weight: 300;
+  margin:0px;
 
 }
 
@@ -134,7 +138,8 @@ p {
 }
 
 .content {
-  float: left;
+
+  margin:2px;
 }
 
 .hero {
