@@ -92,56 +92,7 @@ color:rgba(0, 0, 0, 0.93);
 #modal-wrapper{
   display: none;
 }
-.signUp{
-  background-color: rgba(0, 0, 0, 0.93);
-    color:#fff;
-    border:none;
-    position:relative;
-    height:60px;
-    font-size:1.6em;
-    padding:0 2em;
-    cursor:pointer;
-    font-family: 'Roboto';
-    text-align: center;
-    text-transform: uppercase;
-    color: #FFF;
-    user-select: none;
-    transition:800ms ease all;
-    outline:none;
-    padding-top: 2%;
-}
-.
-.signUp:hover{
-  background-color: rgba(255, 255, 255, 0.93);
-  color: black;
 
-}
-.signUp:hover{
-  background-color: rgba(255, 255, 255, 0.93);
-  color: black;
-  cursor: pointer;
-}
-/* https://codepen.io/onediv/pen/jEmjap */
-.signUp:before,.signUp:after{
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  height:2px;
-  width:0;
-  background:black;
-  transition:400ms ease all;
-}
-.signUp:after{
-  right:inherit;
-  top:inherit;
-  left:0;
-  bottom:0;
-}
-.signUp:hover:before,.signUp:hover:after{
-  width:100%;
-  transition:800ms ease all;
-}
 @media only screen and (min-width: 800px) {
 
   .stickyNav {
@@ -292,10 +243,64 @@ color:rgba(0, 0, 0, 0.93);
   }
 
   #form1{
-    margin:10px auto;
+  margin:10px auto;
 	max-width: 400px;
 	padding: 20px 12px 10px 20px;
 	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  border: 1px solid black;
+}
+.signUp{
+    background-color: rgba(0, 0, 0, 0.93);
+    color:#fff;
+    border:none;
+    position:relative;
+    height:60px;
+    font-size:1.6em;
+    padding:0 2em;
+    cursor:pointer;
+    font-family: 'Roboto';
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFF;
+    user-select: none;
+    transition:800ms ease all;
+    outline:none;
+    padding-top: 2%;
+    margin-left: 37%;
+    width: 250px;
+
+}
+
+.signUp:hover{
+  background-color: rgba(255, 255, 255, 0.93);
+  color: black;
+
+}
+.signUp:hover{
+  background-color: rgba(255, 255, 255, 0.93);
+  color: black;
+  cursor: pointer;
+}
+/* https://codepen.io/onediv/pen/jEmjap */
+.signUp:before,.signUp:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background:black;
+  transition:400ms ease all;
+}
+.signUp:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.signUp:hover:before,.signUp:hover:after{
+  width:100%;
+  transition:800ms ease all;
 }
   }
 
