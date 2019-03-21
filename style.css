@@ -1,4 +1,73 @@
+body{
+background-color: #afafaf;
+}
+.stickyNav{
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.93);
 
+}
+.logo {
+
+  font-size: 25px;
+  color: #8f8f8f;
+  text-transform: uppercase;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: block;
+
+  line-height: 1;
+  margin-bottom: 10px;
+
+}
+nav{
+  justify-content: center;
+  text-align: center;
+
+}
+ nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+
+
+}
+
+nav li a {
+  display: block;
+
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #8f8f8f;
+}
+
+ nav li {
+  text-align: center;
+
+}
+
+
+
+ nav li a:active {
+   background-color: grey;
+   color:rgba(0, 0, 0, 0.93);
+}
+nav li a:visited {
+  color: #8f8f8f;
+  background-color: rgba(0, 0, 0, 0.93);
+
+}
+
+ nav li a:hover:not(:active) {
+
+background-color: white;
+color:rgba(0, 0, 0, 0.93);
+}
+.hero{
+  display: none;
+}
 
 
 
@@ -50,29 +119,32 @@
   nav {
   	grid-column: 4/5;
   	grid-row: 1/2;
-
-  padding-left: 0px;
+    padding-left: 0px;
     width: 100%;
     justify-content: center;
   }
   nav ul {
     list-style: none;
-    overflow: hidden;
+    /* overflow: hidden; */
     text-align: center;
   	display: grid;
   	grid-template-columns: repeat(4,1fr);
     padding-left: 0px;
+    background-color: rgba(0, 0, 0, 0.93);
   }
   nav ul li {
     display: inline-block;
     margin-left: 15px;
-    line-height: 1.5;
+    line-height: 2;
+    color: #8f8f8f;
+    background-color: rgba(0, 0, 0, 0.93);
   }
 
   nav ul a {
     color: #888888;
     text-transform: uppercase;
     font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.93);
   }
   .row {
     width: 100%;
@@ -121,6 +193,7 @@
   }
 
   .hero {
+    display:block;
     position: relative;
     background: url("bgImage.jpg") no-repeat center center fixed;
     background-size: cover;
@@ -188,10 +261,6 @@
 
       transform: translateY(20px);
     }
-
-}
-
-
 
 }
 /* Pop UP Login */
@@ -284,4 +353,8 @@ button:hover {
 @keyframes zoom {
     from {transform: scale(0)}
     to {transform: scale(1)}
+}
+
+
+
 }
