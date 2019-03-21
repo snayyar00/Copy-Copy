@@ -1,75 +1,94 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 3</title>
 
-<link href='https://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
-<link href='style.css' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="icomoon/style.css">
 
-<script src="main.js"></script>
-<header class="stickyNav">
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 
-    <div class="row">
-        <a class="logo" href="index.html">COPY-Paste</a>
-
-        <div class="mobile-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <nav>
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a  onclick="popUp()">Login</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
-            </ul>
-        </nav>
-
-    </div> <!-- / row -->
-
-</header>
+	<!-- Your styles go in this stylesheet -->
 
 
-<div class="hero">
+	<!-- jQuery CDN script tag here -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="main.js" defer></script>
 
-    <h1><span>COPY-Paste</span><br>COPY it anywhere , paste it anywhere</h1>
+</head>
+<body>
 
+	<header>
+	</header>
 
+		<nav class="sticky-bar">
+				<h1>Assignment 3: Intro jQuery</h1>
 
-</div>
+				<button class="search-button" id="open-search" aria-label="Open Search Form">
 
-<div class="content">
-    <h1 class="sec01">Section 01</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, recusandae, at, labore velit eligendi amet nobis repellat natus sequi sint consectetur excepturi doloribus vero provident consequuntur accusamus quisquam nesciunt cupiditate soluta alias illo et deleniti voluptates facilis repudiandae similique dolore quaerat architecto perspiciatis officiis dolor ullam expedita suscipit neque minima rem praesentium inventore ab officia quos dignissimos esse quam placeat iste porro eius! Minus, aspernatur nesciunt consectetur. Sit, eius, itaque, porro, beatae impedit officia tenetur reiciendis autem vitae a quae ipsam repudiandae odio dolorum quaerat asperiores possimus corporis optio animi quisquam laboriosam nihil quam voluptatum quidem veritatis iste culpa iure modi perspiciatis recusandae ipsa libero officiis aliquam doloremque similique id quasi atque distinctio enim sapiente ratione in quia eum perferendis earum blanditiis. Nobis, architecto, veniam molestias minus iste necessitatibus est ab in earum ratione eveniet soluta molestiae sed illo nostrum nemo debitis. Minus, quod totam aliquam ea asperiores fugit quaerat excepturi dolores ratione numquam consequatur id unde alias provident vero incidunt exercitationem similique consequuntur hic possimus? Fuga, eveniet quaerat inventore corporis laborum eligendi enim soluta obcaecati aliquid veritatis provident amet laudantium est quisquam dolore exercitationem modi? Distinctio, pariatur, ab velit praesentium vitae quidem consequatur deleniti recusandae odit officiis. Quidem, cupiditate.</p>
-    <h1 class="sec02">Section 02</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, recusandae, at, labore velit eligendi amet nobis repellat natus sequi sint consectetur excepturi doloribus vero provident consequuntur accusamus quisquam nesciunt cupiditate soluta alias illo et deleniti voluptates facilis repudiandae similique dolore quaerat architecto perspiciatis officiis dolor ullam expedita suscipit neque minima rem praesentium inventore ab officia quos dignissimos esse quam placeat iste porro eius! Minus, aspernatur nesciunt consectetur. Sit, eius, itaque, porro, beatae impedit officia tenetur reiciendis autem vitae a quae ipsam repudiandae odio dolorum quaerat asperiores possimus corporis optio animi quisquam laboriosam nihil quam voluptatum quidem veritatis iste culpa iure modi perspiciatis recusandae ipsa libero officiis aliquam doloremque similique id quasi atque distinctio enim sapiente ratione in quia eum perferendis earum blanditiis. Nobis, architecto, veniam molestias minus iste necessitatibus est ab in earum ratione eveniet soluta molestiae sed illo nostrum nemo debitis. Minus, quod totam aliquam ea asperiores fugit quaerat excepturi dolores ratione numquam consequatur id unde alias provident vero incidunt exercitationem similique consequuntur hic possimus? Fuga, eveniet quaerat inventore corporis laborum eligendi enim soluta obcaecati aliquid veritatis provident amet laudantium est quisquam dolore exercitationem modi? Distinctio, pariatur, ab velit praesentium vitae quidem consequatur deleniti recusandae odit officiis. Quidem, cupiditate.</p>
-    <h1 class="sec03">Section 03</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, recusandae, at, labore velit eligendi amet nobis repellat natus sequi sint consectetur excepturi doloribus vero provident consequuntur accusamus quisquam nesciunt cupiditate soluta alias illo et deleniti voluptates facilis repudiandae similique dolore quaerat architecto perspiciatis officiis dolor ullam expedita suscipit neque minima rem praesentium inventore ab officia quos dignissimos esse quam placeat iste porro eius! Minus, aspernatur nesciunt consectetur. Sit, eius, itaque, porro, beatae impedit officia tenetur reiciendis autem vitae a quae ipsam repudiandae odio dolorum quaerat asperiores possimus corporis optio animi quisquam laboriosam nihil quam voluptatum quidem veritatis iste culpa iure modi perspiciatis recusandae ipsa libero officiis aliquam doloremque similique id quasi atque distinctio enim sapiente ratione in quia eum perferendis earum blanditiis. Nobis, architecto, veniam molestias minus iste necessitatibus est ab in earum ratione eveniet soluta molestiae sed illo nostrum nemo debitis. Minus, quod totam aliquam ea asperiores fugit quaerat excepturi dolores ratione numquam consequatur id unde alias provident vero incidunt exercitationem similique consequuntur hic possimus? Fuga, eveniet quaerat inventore corporis laborum eligendi enim soluta obcaecati aliquid veritatis provident amet laudantium est quisquam dolore exercitationem modi? Distinctio, pariatur, ab velit praesentium vitae quidem consequatur deleniti recusandae odit officiis. Quidem, cupiditate.</p>
-    <h1 class="sec04">Section 04</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, recusandae, at, labore velit eligendi amet nobis repellat natus sequi sint consectetur excepturi doloribus vero provident consequuntur accusamus quisquam nesciunt cupiditate soluta alias illo et deleniti voluptates facilis repudiandae similique dolore quaerat architecto perspiciatis officiis dolor ullam expedita suscipit neque minima rem praesentium inventore ab officia quos dignissimos esse quam placeat iste porro eius! Minus, aspernatur nesciunt consectetur. Sit, eius, itaque, porro, beatae impedit officia tenetur reiciendis autem vitae a quae ipsam repudiandae odio dolorum quaerat asperiores possimus corporis optio animi quisquam laboriosam nihil quam voluptatum quidem veritatis iste culpa iure modi perspiciatis recusandae ipsa libero officiis aliquam doloremque similique id quasi atque distinctio enim sapiente ratione in quia eum perferendis earum blanditiis. Nobis, architecto, veniam molestias minus iste necessitatibus est ab in earum ratione eveniet soluta molestiae sed illo nostrum nemo debitis. Minus, quod totam aliquam ea asperiores fugit quaerat excepturi dolores ratione numquam consequatur id unde alias provident vero incidunt exercitationem similique consequuntur hic possimus? Fuga, eveniet quaerat inventore corporis laborum eligendi enim soluta obcaecati aliquid veritatis provident amet laudantium est quisquam dolore exercitationem modi? Distinctio, pariatur, ab velit praesentium vitae quidem consequatur deleniti recusandae odit officiis. Quidem, cupiditate.</p>
+				</button>
 
-		<div id="modal-wrapper" class="modal">
+					<ul>
+						<li><a href="#">Electric</a></li>
+						<li><a href="#">Acoustic</a></li>
+						<li><a href="#">Amplifiers</a></li>
+						<li><a href="#">Pedals</a></li>
+					</ul>
 
-		  <form class="modal-content animate" action="/action_page.php">
+				<!-- You will use jQuery to toggle this form -->
+				<form method="post" action="http://webdevbasics.net/scripts/demo.php" class="search-form">
 
-		    <div class="imgcontainer">
-		      <span onclick="popUpClose()" class="close" title="Close PopUp">&times;</span>
-		      <img src="1.png" alt="Avatar" class="avatar">
-		      <h1 ></h1>
-		    </div>
+					<label for="search-bar">Search</label>
+					<input type="search" id="search-bar" name="search" placeholder="search">
 
-		    <div class="container">
-		      <input type="text" placeholder="Enter Username" name="uname">
-		      <input type="password" placeholder="Enter Password" name="psw">
-		      <button type="submit">Login</button>
-		      <input type="checkbox" > Remember me<br>
-		      <a href="#" >Forgot Password ?</a>
-		    </div>
+					<button type="submit" aria-label="Submit Search">
 
-		  </form>
+					</button>
 
-		</div>
+					<button type="button" class="close-button" aria-label="Close Search"></button>
 
-</div>
+				</form>
+			</nav> <!-- end of sticky-bar -->
+
+	<div class="wrapper">
+
+		<main>
+			<section>
+				<h2>Electric</h2>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet ipsa iste eligendi esse, est, accusamus consectetur omnis. Voluptas porro perspiciatis rem dolore modi assumenda cumque, commodi fuga? Fugiat, exercitationem tempore!</p>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio a illum velit aspernatur dolorum architecto placeat, vero voluptatibus sed officiis iste impedit sunt, voluptate nulla quisquam minus enim sapiente beatae!</p>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis nobis delectus ullam. Tenetur ad soluta nesciunt, laudantium labore. Dicta soluta quas expedita aperiam voluptatem culpa, perspiciatis esse natus delectus enim.</p>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus minima dolore tenetur cupiditate minus, exercitationem magni quasi, vitae ipsa, autem earum sit nobis ipsum quam fuga! Laborum praesentium autem, nemo.</p>
+			</section>
+
+			<section>
+				<h2>Acoustic</h2>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem reprehenderit recusandae nobis excepturi deleniti consectetur sit porro nostrum blanditiis dolorum nisi itaque, quia minima laboriosam vitae repellendus tenetur ea sunt.</p>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus obcaecati velit natus, asperiores commodi ipsa eos aperiam fugiat suscipit quis, quo eaque. Quia eligendi, non est iure dolores enim, voluptates.</p>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet ipsa iste eligendi esse, est, accusamus consectetur omnis. Voluptas porro perspiciatis rem dolore modi assumenda cumque, commodi fuga? Fugiat, exercitationem tempore!</p>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio a illum velit aspernatur dolorum architecto placeat, vero voluptatibus sed officiis iste impedit sunt, voluptate nulla quisquam minus enim sapiente beatae!</p>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis nobis delectus ullam. Tenetur ad soluta nesciunt, laudantium labore. Dicta soluta quas expedita aperiam voluptatem culpa, perspiciatis esse natus delectus enim.</p>
+			</section>
+
+		</main>
+
+		<aside>
+			<h2>Amplifiers</h2>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id at illo ad dolore voluptatibus! Esse ratione, eaque impedit temporibus, consequatur laboriosam cum incidunt autem illo dolor facere aperiam odio eum.</p>
+
+		</aside>
+	</div> <!-- end of wrapper -->
+
+</body>
+</html>
