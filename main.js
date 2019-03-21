@@ -18,19 +18,15 @@ $(window).scroll(function() {
 //Pop UP Login
 function popUp(){
 	document.getElementById('modal-wrapper').style.display='block';
+  if (screen.width <= 800) {
+  document.getElementById("login").href="login.html";
+  }
 };
 function popUpClose(){
 	document.getElementById('modal-wrapper').style.display='none';
 };
 
-// Mobile Navigation
-$('.mobile-toggle').click(function() {
-    if ($('.stickyNav').hasClass('open-nav')) {
-        $('.stickyNav').removeClass('open-nav');
-    } else {
-        $('.stickyNav').addClass('open-nav');
-    }
-});
+
 
 $('.main_h li a').click(function() {
     if ($('.stickyNav').hasClass('open-nav')) {
@@ -39,7 +35,6 @@ $('.main_h li a').click(function() {
     }
 });
 
-// navigation scroll lijepo radi materem
 $('nav a').click(function(event) {
     var id = $(this).attr("href");
     var offset = 70;

@@ -1,8 +1,10 @@
 body{
-background-color: #afafaf;
+background-color: #fff;
+color: #8f8f8f;
 }
 header{
   margin: 0;
+  border: 1px solid black ;
 }
 .row{
   margin: 0;
@@ -47,6 +49,7 @@ nav li a {
   padding: 8px 16px;
   text-decoration: none;
   color: #8f8f8f;
+
 }
 
  nav li {
