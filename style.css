@@ -1,6 +1,12 @@
 body{
 background-color: #afafaf;
 }
+header{
+  margin: 0;
+}
+.row{
+  margin: 0;
+}
 .stickyNav{
   width: 100%;
   text-align: center;
