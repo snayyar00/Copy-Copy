@@ -14,11 +14,13 @@ header{
   text-align: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.93);
+  /* position: fixed;
+  top: 0px; */
 
 }
 .logo {
 
-  font-size: 25px;
+  font-size: 45px;
   color: #8f8f8f;
   text-transform: uppercase;
   grid-column: 1/2;
@@ -78,7 +80,18 @@ color:rgba(0, 0, 0, 0.93);
   display: none;
 }
 
-
+.icon-circle-up{
+  right: 5px;
+  top: 1;
+  position: fixed;
+  z-index: 3000;
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+#modal-wrapper{
+  display: none;
+}
 
 @media only screen and (min-width: 800px) {
 
@@ -224,6 +237,9 @@ color:rgba(0, 0, 0, 0.93);
     border-bottom: 2px solid #e8f380;
     padding-bottom: 12px;
     line-height: 3;
+  }
+  .icon-circle-up{
+    display: none;
   }
 
   /* .mouse {

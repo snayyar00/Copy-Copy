@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?fz5avv');
-  src:  url('fonts/icomoon.eot?fz5avv#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?fz5avv') format('truetype'),
-    url('fonts/icomoon.woff?fz5avv') format('woff'),
-    url('fonts/icomoon.svg?fz5avv#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?ygzbn0');
+  src:  url('fonts/icomoon.eot?ygzbn0#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ygzbn0') format('truetype'),
+    url('fonts/icomoon.woff?ygzbn0') format('woff'),
+    url('fonts/icomoon.svg?ygzbn0#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] , [class="search-button"],[class="close-button"],[id='search-bar'], button[type="submit"] {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -23,22 +23,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-button:before{
-  content: "\e986";
-}
 
-#search-bar:before{
-  content: "\e986";
-}
-.search-button:before {
-  content: "\e986";
-}
-.close-button:before{
-    content: "\ea0f";
-}
-.icon-search:before {
-  content: "\e986";
-}
-.icon-cross:before {
-  content: "\ea0f";
+.icon-circle-up:before {
+  content: "\ea41";
 }
