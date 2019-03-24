@@ -21,8 +21,8 @@
         <ul>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
-          <li><a href="#" id="login" onclick="popUp()">Login</a></li>
-          <li><a href="#">Sign Up</a></li>
+          <li><a href="login.php" id="login" onclick="popUp()">Login</a></li>
+          <li><a href="Register.html">Sign Up</a></li>
         </ul>
       </nav>
 
@@ -56,7 +56,7 @@
     other platforms arriving soon!</p>
 
   <div id="form1">
-    <form name="form" method="post" action="index.php?action=check">
+    <form name="form" method="post" action="indexLogged.php">
       <h4>Type the Text you want to paste</h4>
 
       <textarea type="text" name="text" rows="4" cols="50"></textarea>
@@ -71,7 +71,7 @@
   </div>
   <div id="modal-wrapper" class="modal">
 
-    <form class="modal-content animate" action="/action_page.php">
+    <form class="modal-content animate" action="login.php">
 
       <div class="imgcontainer">
         <span onclick="popUpClose()" class="close" title="Close PopUp">&times;</span>
@@ -80,6 +80,7 @@
       </div>
 
       <div class="container">
+
         <input type="text" placeholder="Enter Username" name="uname">
         <input type="password" placeholder="Enter Password" name="psw">
         <button type="submit">Login</button>
@@ -95,32 +96,3 @@
 </body>
 
 </html>
-<?php
-   include("config.php");
-   session_start();
-
-   if($_SERVER["REQUEST_METHOD"] == "POST") {
-      // username and password sent from form
-
-      $myusername = mysqli_real_escape_string($db,$_POST['username']);
-      $mypassword = mysqli_real_escape_string($db,$_POST['password']);
-
-      $sql = "SELECT id FROM admin WHERE username = '$myusername' and passcode = '$mypassword'";
-      $result = mysqli_query($db,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
-
-      $count = mysqli_num_rows($result);
-
-      // If result matched $myusername and $mypassword, table row must be 1 row
-
-      if($count == 1) {
-         session_register("myusername");
-         $_SESSION['login_user'] = $myusername;
-
-         header("location: welcome.php");
-      }else {
-         $error = "Your Login Name or Password is invalid";
-      }
-   }
-?>
