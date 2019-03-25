@@ -9,18 +9,19 @@ if($_POST)
     $password = stripslashes($password);
     $email = mysql_real_escape_string($email);
     $password = mysql_real_escape_string($password);
-    $sql="SELECT * FROM members WHERE username='$email' and password='$password'";
-    $result=mysql_query($sql);
+    $query="SELECT * FROM `members` WHERE email='$email' AND password='$password' ";
+    if(mysqli_query($conn,$query))
+    {
+      session_start();
+      $_SESSION['loggedin'] = true;
+      $_SESSION['email'] = $email;
+      echo"<script>console.log('yo');</script>";
 
-// Mysql_num_row is counting table row
-$count=mysql_num_rows($result);
-
-// If result matched $username and $password, table row must be 1 row
-if($count==1){
-    session_start();
-    $_SESSION['loggedin'] = true;
-    $_SESSION['username'] = $username;
-}
+    }
+    else
+    {
+        echo 'Error occured!!';
+    }
     mysqli_close($conn);
 };
 ?>
@@ -30,6 +31,7 @@ if($count==1){
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 <link href="styleLog.css" type="text/css">
+<script src="main.js"></script>
   <script type="text/javascript">
      $(document).ready(function(){
          // WILL PREVENT FORM FROM SENDING IF THERE ARE ERRORS (comment this out to test PHP validation.)
@@ -61,7 +63,7 @@ if($count==1){
 
   </header>
 <div id="Sign-Up">
-  <form  method="POST" action="register.php" >
+  <form  method="POST" action="login.php" >
     <div class="container">
       <h1>Log in</h1>
       <p>Enter your credentials.                   </p>
@@ -81,7 +83,7 @@ if($count==1){
 </div>
 
 
-      <input type="submit" name="sumbit" value="Sign Up">
+      <input type="submit" name="sumbit" value="Log in">
   </div>
   </div>
   </form>

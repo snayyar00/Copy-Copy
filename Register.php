@@ -25,6 +25,7 @@ if($_POST)
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 <link href="styleLog.css" type="text/css">
+<script src="main.js"></script>
   <script type="text/javascript">
      $(document).ready(function(){
          // WILL PREVENT FORM FROM SENDING IF THERE ARE ERRORS (comment this out to test PHP validation.)
