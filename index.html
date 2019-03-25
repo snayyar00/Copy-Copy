@@ -21,8 +21,8 @@
         <ul>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
-          <li><a href="login.php" id="login" onclick="popUp()">Login</a></li>
-          <li><a href="Register.html">Sign Up</a></li>
+          <li><a href="login.php" id="login">Login</a></li>
+          <li><a href="Register.php">Sign Up</a></li>
         </ul>
       </nav>
 
@@ -59,40 +59,23 @@
     <form name="form" method="post" action="indexLogged.php">
       <h4>Type the Text you want to paste</h4>
 
-      <textarea type="text" name="text" rows="4" cols="50"></textarea>
+      <textarea type="text" name="text" rows="4" cols="40"></textarea>
       <br>
       <input type="submit" value="Submit" name="Submit" />
     </form>
 
   </div>
-  <div class="signUp">
+  <a href=" Register.php">  <div class="signUp" >
     <!-- add aria -->
     Sign Up
-  </div>
-  <div id="modal-wrapper" class="modal">
+  </div></a>
 
-    <form class="modal-content animate" action="login.php">
-
-      <div class="imgcontainer">
-        <span onclick="popUpClose()" class="close" title="Close PopUp">&times;</span>
-        <img src="1.png" alt="Avatar" class="avatar">
-        <h1></h1>
-      </div>
-
-      <div class="container">
-
-        <input type="text" placeholder="Enter Username" name="uname">
-        <input type="password" placeholder="Enter Password" name="psw">
-        <button type="submit">Login</button>
-        <input type="checkbox"> Remember me<br>
-        <a href="#">Forgot Password ?</a>
-      </div>
-
-    </form>
-
-  </div>
 
 </div>
+<footer>
+  <p>Made by: Sidharth Nayyar</p>
+  <p>Contact information: <a href="mailto:sidharth15nayyar.com">sidharth15nayyar.com</a>.</p>
+</footer>
 </body>
 
 </html>
