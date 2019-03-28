@@ -1,36 +1,42 @@
 <?php
-if($_POST)
-{
-    $conn=mysqli_connect('localhost','root','','CopyPaste');
+require_once 'database.php';
 
+if($_SERVER["REQUEST_METHOD"] == "POST")
+{
+  $pdo = db_connect();
     $email=$_POST['email'];
     $password=md5($_POST['password']);
     $email = stripslashes($email);
     $password = stripslashes($password);
     $email = mysql_real_escape_string($email);
     $password = mysql_real_escape_string($password);
-    $query="SELECT * FROM `members` WHERE email='$email' AND password='$password' ";
-    if(mysqli_query($conn,$query))
-    {
-      session_start();
-      $_SESSION['loggedin'] = true;
-      $_SESSION['email'] = $email;
-      header("location:index.php");
 
-    }
+    //Validation if user exists
+  $query="SELECT * FROM `members` WHERE email='$email' AND password='$password' ";
+  $resultExist = $pdo->query($query);
+  if(isset($resultExist)){
+    echo "<script>alert('".$email."Logged in ')</script>";
+    session_start();
+    $_SESSION['loggedin'] = true;
+    $_SESSION['email'] = $email;
+    $_SESSION['password']=$password;
+
+
+  }
     else
     {
-        echo 'Error occured!!';
-    }
-    mysqli_close($conn);
-};
+        echo "<script>alert('".$email." User doesnot exist')</script>";
+    };
+
+  };
+
 ?>
 <html>
 <head>
 <title>Log In</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
-<link href="styleLog.css" type="text/css">
+<link href="styleLog.css" type="text/css" rel='stylesheet'>
 <script src="main.js"></script>
   <script type="text/javascript">
      $(document).ready(function(){
@@ -39,12 +45,12 @@ if($_POST)
        });
     </script>
     <style>
-    <?php include 'styleLog.css'; ?>
+
     </style>
 </head>
 <body >
   <header class="stickyNav sticky">
-    <a href="#top" class="icon-circle-up"></span>
+  <span>  <a href="#top" class="icon-circle-up"></span>
       <div class="row">
         <a class="logo" href="index.html">COPY-Paste</a>
 
@@ -54,8 +60,8 @@ if($_POST)
           <ul>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
-            <li><a href="login.php" id="login" onclick="popUp()">Login</a></li>
-            <li><a href="Register.php">Sign Up</a></li>
+            <li><a href="login.html" id="login" onclick="popUp()">Login</a></li>
+            <li><a href="Register.html">Sign Up</a></li>
           </ul>
         </nav>
 
@@ -85,7 +91,7 @@ if($_POST)
 
       <input type="submit" name="sumbit" value="Log in">
   </div>
-  </div>
+
   </form>
 </div>
 </body>

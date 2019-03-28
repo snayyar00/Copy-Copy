@@ -156,7 +156,9 @@ input[type="submit"], input[type="reset"]
   }
 }
 @media only screen and (min-width: 800px) {
-
+body{
+  background-image: url("bgImage.jpg");
+}
   .stickyNav {
     position: fixed;
     top: 0px;

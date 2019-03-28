@@ -10,7 +10,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script src="main.js"></script>
+
 </head>
+
 <body>
 <header class="stickyNav">
   <a href="#top" class="icon-circle-up"></span>
@@ -57,43 +59,60 @@
     <h2>Any app, any device</h2>
     <p>We integrate with all your phones and computers - so anything you copy from any app is instantly available everywhere with the power of CopyCopy. CopyCopy works on Android, iOS, Blackberry*, Windows, Mac, Chrome and Firefox with support for
       other platforms arriving soon!</p>
-<?php
-require 'login.php';
-global  $email;
-global  $password;
-global $conn;
+      <?php
+      ini_set('display_errors', 1);
+      error_reporting(E_ALL);
+      require 'database.php';
+      $pdo=db_connect();
+
+      session_start();
+
+      if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+          echo "Welcome to the member's area, " .$_SESSION['email']. "!";
+
+      } else {
+          echo "Please log in first to see this page.";
+      }
+
+      if($_SERVER["REQUEST_METHOD"] == "POST")
+      {
+        $copiedText=$_POST['textCopy'];
+        if ($_SESSION['loggedin'] == true){
 
 
-session_start();
-if ($_SESSION['loggedin'] == true) {
-    echo "Welcome to the member's area, " .$_SESSION['email'] = $email. "!";
-} else {
-    echo "Please log in first to see this page.";
-}
+          $query="UPDATE `members` SET `copy` = 'yo' WHERE `members`.`ID` = 1";
+          echo $query;
 
-if($_POST){
-  $copiedText=$_POST['textCopy'];
-  if ($_SESSION['loggedin'] == true){
-    $query="UPDATE  `members` SET `copy`=$copiedText where email='$email' AND password= '$password' ";
-    if(mysqli_query($conn,$query))
-    {
-        echo $email.' User Successfully Registered!!';
-         header("location: index.html");
 
-    }
-  }
-}
- ?>
+          $statement= $pdo->prepare($query);
+
+         if ($statement->execute()) {
+           echo $copiedText;
+
+              echo "Text Copied";
+          }
+         else {
+            echo "Not worked";
+          }
+
+
+        }
+      }
+
+      //connect to database: PHP Data object representing Database connection
+
+       ?>
     <div id="form1">
-      <form name="form" method="post" >
+      <form name="form" method="post" action="index.php" >
         <h4>Type the Text you want to paste</h4>
 
         <textarea type="text" name="textCopy" rows="4" cols="40"></textarea>
         <br>
-        <input type="submit" value="Submit" name="Submit" />
+        <input type="submit" value="submit" name="submit" />
       </form>
 
     </div>
+
     <a href=" Register.php">
       <div class="signUp">
         <!-- add aria -->
