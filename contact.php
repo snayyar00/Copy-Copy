@@ -59,7 +59,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         <nav>
           <ul>
             <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="contact.php">Contact</a></li>
             <li><a href="login.php" id="login" onclick="popUp()">Login</a></li>
             <li><a href="Register.php">Sign Up</a></li>
           </ul>
@@ -69,10 +69,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
   </header>
 <div id="Sign-Up">
-  <form  method="POST" action="register.php" >
+  <form  method="POST" action="contact.php" >
     <div class="container">
-      <h1>Sign Up</h1>
-      <p>Please fill in this form to create an account.</p>
+      <h1>Contact</h1>
+      <p>Thanks For Contacting us.</p>
       <hr>
 <div>
       <label for="email" ><b>Email</b></label>
@@ -83,13 +83,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
 
 <div>
+  <div>
+    <br>
+    <label><b>Your message goes here</b></label><br>
+    <textarea value="Your message goes here" rows="6" cols="40"></textarea>
+  </div>
       <label>
         <input type="checkbox" checked="checked" name="remember" > Remember me
       </label>
 </div>
-      <p>By creating an account you agree to our <a href="#" >Terms & Privacy</a>.</p>
 
-      <input type="submit" name="sumbit" value="Sign Up">
+
+      <input type="submit" name="sumbit" value="Send">
   </div>
   </div>
   </form>

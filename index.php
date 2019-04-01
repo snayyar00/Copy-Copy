@@ -17,16 +17,16 @@
 <header class="stickyNav">
   <a href="#top" class="icon-circle-up"></span>
     <div class="row">
-      <a class="logo" href="index.html">COPY-Paste</a>
+      <a class="logo" href="index.php">COPY-Paste</a>
 
 
 
       <nav>
         <ul>
           <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="login.html" id="login">Login</a></li>
-          <li><a href="Register.html">Sign Up</a></li>
+          <li><a href="contact.php">Contact</a></li>
+          <li><a href="login.php" id="login">Login</a></li>
+          <li><a href="Register.php">Sign Up</a></li>
         </ul>
       </nav>
 
@@ -51,14 +51,12 @@
     </p>
     <h2>All your data – big or small</h2>
     <p>
-      CopyCopy can easily copy a snippet of text – like a useful phone number or entire folders of files with equal ease. CopyCopy is flexible enough to handle it all - just copy it!
+      COPY-paste can easily copy a snippet of text – like a useful phone number or entire folders of files with equal ease. COPY-paste is flexible enough to handle it all - just copy it!
     </p>
     <h2>Wherever you go</h2>
-    <p>Anything you copycopy is instantly accessible on all your devices. Wherever you are – in the office or on the go. All your stuff is stored forever ready for you to retrieve when you need it most.
+    <p>Anything you COPY-paste is instantly accessible on all your devices. Wherever you are – in the office or on the go. All your stuff is stored forever ready for you to retrieve when you need it most.
     </p>
-    <h2>Any app, any device</h2>
-    <p>We integrate with all your phones and computers - so anything you copy from any app is instantly available everywhere with the power of CopyCopy. CopyCopy works on Android, iOS, Blackberry*, Windows, Mac, Chrome and Firefox with support for
-      other platforms arriving soon!</p>
+
       <?php
       ini_set('display_errors', 1);
       error_reporting(E_ALL);
@@ -68,7 +66,7 @@
       session_start();
 
       if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-          echo "Welcome to the member's area, " .$_SESSION['email']. "!";
+          echo "<h3>Welcome , " .$_SESSION['email']. "!</h3>";
 
       } else {
           echo "Please log in first to see this page.";
@@ -78,7 +76,6 @@
       {
         $copiedText=$_POST['textCopy'];
         if ($_SESSION['loggedin'] == true){
-
 
           $query="UPDATE `members` SET `copy` = 'yo' WHERE `members`.`ID` = 1";
           echo $query;
@@ -106,7 +103,7 @@
       <form name="form" method="post" action="index.php" >
         <h4>Type the Text you want to paste</h4>
 
-        <textarea type="text" name="textCopy" rows="4" cols="40"></textarea>
+        <textarea type="text" name="textCopy" rows="6" cols="40"></textarea>
         <br>
         <input type="submit" value="submit" name="submit" />
       </form>
@@ -119,13 +116,14 @@
         Sign Up
       </div>
     </a>
+    <a href=" login.php">
+      <div class="signUp">
+        <!-- add aria -->
+        Log In
+      </div>
+    </a>
   </div>
-  <a href=" login.php">
-    <div class="signUp">
-      <!-- add aria -->
-      Log In
-    </div>
-  </a>
+
 
 
   </div>

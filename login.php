@@ -52,7 +52,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   <header class="stickyNav sticky">
   <span>  <a href="#top" class="icon-circle-up"></span>
       <div class="row">
-        <a class="logo" href="index.html">COPY-Paste</a>
+        <a class="logo" href="index.php">COPY-Paste</a>
 
 
 
@@ -60,8 +60,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
           <ul>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
-            <li><a href="login.html" id="login" onclick="popUp()">Login</a></li>
-            <li><a href="Register.html">Sign Up</a></li>
+            <li><a href="login.php" id="login" onclick="popUp()">Login</a></li>
+            <li><a href="Register.php">Sign Up</a></li>
           </ul>
         </nav>
 
