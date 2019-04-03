@@ -1,0 +1,284 @@
+html
+{
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+body
+{
+background-image: url("bgImage.jpg");
+background-color: white;
+  display: flex;
+ flex-direction: column;
+ background-repeat: no-repeat;
+  background-size: 100% 100%;
+ align-items: center;
+ background-position: center;
+
+}
+header{
+  margin: 0;
+  border: 1px solid black ;
+}
+.row{
+  margin: 0;
+}
+.stickyNav{
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.93);
+  /* position: fixed;
+  top: 0px; */
+
+}
+.logo {
+
+  font-size: 45px;
+  color: #8f8f8f;
+  text-transform: uppercase;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: block;
+
+  line-height: 1;
+  margin-bottom: 10px;
+
+}
+nav{
+  justify-content: center;
+  text-align: center;
+
+}
+ nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+
+
+}
+
+nav li a {
+  display: block;
+
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #8f8f8f;
+
+}
+
+ nav li {
+  text-align: center;
+
+}
+
+
+
+ nav li a:active {
+   background-color: grey;
+   color:rgba(0, 0, 0, 0.93);
+}
+nav li a:visited {
+  color: #8f8f8f;
+  background-color: rgba(0, 0, 0, 0.93);
+
+}
+
+ nav li a:hover:not(:active) {
+
+background-color: white;
+color:rgba(0, 0, 0, 0.93);
+}
+#Sign-Up{
+
+    width:40%;
+    opacity: 1;
+    margin-top: 20%;
+}
+
+form
+{
+
+background-color: white;
+
+  box-sizing: border-box;
+width:100%;
+
+  border-radius: 10px;
+
+  margin-bottom: 1rem;
+}
+
+form, form>label
+{
+
+
+;
+  display: flex;
+  flex-direction: column;
+}
+
+form>*
+{
+  margin:.5rem;
+}
+
+
+fieldset label
+{
+  margin-bottom:.5rem;
+  margin-right:1rem;
+}
+
+input[type="submit"], input[type="reset"]
+{
+  align-self: center;
+}
+
+.help-block, .failure-message
+{
+  color:red;
+
+  animation-name: glow;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.signUp{
+  width: 100vh;
+}
+@keyframes glow
+{
+  from {
+    text-shadow: 0 0 1px rgba(255,0,0,.2);
+  }
+
+  to {
+    text-shadow: 0 0 4px rgba(255,0,0,.6);
+  }
+}
+#wrapper{
+  width:100%;
+   background-color: white;
+   text-align: center;
+   color: black;
+}
+#wrapper img{
+  margin-top: 20%;
+  width:40%;
+  height: 40%;
+}
+#wrapper p{
+  background-color: white;
+}
+#wrapper h3{
+
+
+
+  /* background-color: white; */
+}
+@media only screen and (min-width: 800px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    color: #8f8f8f;
+    background: white;
+    font-family: "Cardo", serif;
+    font-weight: 300;
+    margin:0px;
+    background-image: url("bgImage.jpg");
+    background-repeat: no-repeat;
+     background-size: 100% 100%;
+    align-items: center;
+    background-position: center;
+
+
+  }
+.stickyNav {
+  position: fixed;
+  top: 0px;
+  max-height: 70px;
+  z-index: 999;
+  width: 100%;
+  padding-top: 17px;
+  background: none;
+  overflow: hidden;
+  transition: all 0.3s;
+  opacity: 0;
+  top: -100px;
+  padding-bottom: 6px;
+  font-family: "Montserrat", sans-serif;
+
+}
+
+
+
+
+
+.sticky {
+  background-color: rgba(0, 0, 0, 0.93);
+  opacity: 1;
+  top: 0px;
+  border-bottom: 1px solid gainsboro;
+}
+
+.logo {
+  width: 50px;
+  font-size: 25px;
+  color: #8f8f8f;
+  text-transform: uppercase;
+  grid-column: 1/4;
+  grid-row: 1/2;
+  display: block;
+  margin-top: 0;
+  line-height: 1;
+  margin-bottom: 10px;
+  padding-left: 10px;
+
+}
+nav {
+  grid-column: 4/5;
+  grid-row: 1/2;
+  padding-left: 0px;
+  width: 100%;
+  justify-content: center;
+}
+nav ul {
+  list-style: none;
+  /* overflow: hidden; */
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  padding-left: 0px;
+  background-color: rgba(0, 0, 0, 0.93);
+}
+nav ul li {
+  display: inline-block;
+  margin-left: 15px;
+  line-height: 2;
+  color: #8f8f8f;
+  background-color: rgba(0, 0, 0, 0.93);
+}
+
+nav ul a {
+  color: #888888;
+  text-transform: uppercase;
+  font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.93);
+}
+.row {
+  width: 100%;
+  /* max-width: 940px; */
+  margin: 0 0;
+  position: relative;
+  padding: 0 0;
+  display: grid;
+  grid-template-columns: 100px 150px 200px 1fr;
+  grid-template-rows: 1fr;
+}
+
+
+}

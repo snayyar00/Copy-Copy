@@ -23,7 +23,7 @@
 
       <nav>
         <ul>
-          <li><a href="#">About</a></li>
+          <li><a href="About.php">About</a></li>
           <li><a href="contact.php">Contact</a></li>
           <li><a href="login.php" id="login">Login</a></li>
           <li><a href="Register.php">Sign Up</a></li>
@@ -61,32 +61,60 @@
       ini_set('display_errors', 1);
       error_reporting(E_ALL);
       require 'database.php';
+      require 'functions_template.php';
+      global $pdo;
       $pdo=db_connect();
 
       session_start();
 
       if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
           echo "<h3>Welcome , " .$_SESSION['email']. "!</h3>";
+          $copiedText='';
 
-      } else {
+
+           $queryCopy="SELECT * FROM members WHERE email='".$_SESSION['email']."' ";
+
+           $resultExist = $pdo->query($queryCopy);
+           $text = Array();
+           while($row = $resultExist->fetch()){
+           array_push($text,$row);
+            foreach($text as $copy){
+                  $copiedText = $copy[3];
+                }
+
+          }
+
+
+
+        echo "<script> var x='' ; var x='".$copiedText."' ; setInterval(function() { document.getElementById('paste').innerHTML=x;}, 100);";
+
+
+
+         echo  "</script>";
+
+       }
+
+     else {
           echo "Please log in first to see this page.";
-      }
+      };
 
-      if($_SERVER["REQUEST_METHOD"] == "POST")
+  if($_SERVER["REQUEST_METHOD"] == "POST")
       {
         $copiedText=$_POST['textCopy'];
         if ($_SESSION['loggedin'] == true){
 
-          $query="UPDATE `members` SET `copy` = 'yo' WHERE `members`.`ID` = 1";
-          echo $query;
+          $query="UPDATE `members` SET `copy` = '".$copiedText."' WHERE `email`= '".$_SESSION['email']."';" ;
 
 
+
+
+          echo"<br>";
           $statement= $pdo->prepare($query);
 
          if ($statement->execute()) {
-           echo $copiedText;
 
-              echo "Text Copied";
+
+              echo "The Text that is Copied is--- ".$copiedText ;
           }
          else {
             echo "Not worked";
@@ -106,6 +134,8 @@
         <textarea type="text" name="textCopy" rows="6" cols="40"></textarea>
         <br>
         <input type="submit" value="submit" name="submit" />
+        <h4>Type the text you pasted</h4>
+        <h5 id="paste" ></h4>
       </form>
 
     </div>

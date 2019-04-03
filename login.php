@@ -37,6 +37,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 <link href="styleLog.css" type="text/css" rel='stylesheet'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="main.js"></script>
   <script type="text/javascript">
      $(document).ready(function(){

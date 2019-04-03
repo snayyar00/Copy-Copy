@@ -10,26 +10,6 @@ $(window).scroll(function() {
         $('.stickyNav').removeClass('sticky');
     }
 });
-// If user clicks anywhere outside of the modal, Modal will close
-//
-// var modal = document.getElementById('modal-wrapper');
-// window.onclick = function(event) {
-//     if (event.target != modal) {
-//         modal.style.display="none" ;
-//     }
-// };
-//Pop UP Login
-function popUp(){
-	document.getElementById('modal-wrapper').style.display='block';
-  if (screen.width <= 800) {
-  document.getElementById("login").href="login.html";
-  }
-};
-function popUpClose(){
-	document.getElementById('modal-wrapper').style.display='none';
-};
-
-
 
 $('.main_h li a').click(function() {
     if ($('.stickyNav').hasClass('open-nav')) {
@@ -37,6 +17,7 @@ $('.main_h li a').click(function() {
         $('.stickyNav').removeClass('open-nav');
     }
 });
+
 
 $('nav a').click(function(event) {
     var id = $(this).attr("href");

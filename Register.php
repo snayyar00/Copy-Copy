@@ -10,9 +10,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $email=$_POST['email'];
     $password=md5($_POST['password']);
     //Validation if user exists
-  $queryExists="SELECT * FROM `members` WHERE email='$email' AND password='$password' ";
+  $queryExists="SELECT * FROM members WHERE email='".$email."' AND password='".$password."' ";
+
   $resultExist = $pdo->query($queryExists);
   if(isset($resultExist)){
+
     echo "<script>alert('".$email." User already registered!! ')</script>";
   }
   else{
@@ -39,6 +41,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 <link href="styleLog.css"  rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="main.js"></script>
   <script type="text/javascript">
      $(document).ready(function(){
