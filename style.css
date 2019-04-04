@@ -19,6 +19,7 @@ header{
   top: 0px; */
 
 }
+
 .logo {
 
   font-size: 45px;
@@ -77,6 +78,7 @@ nav li a:visited {
 background-color: white;
 color:rgba(0, 0, 0, 0.93);
 }
+
 .hero{
   display: none;
 }
@@ -98,7 +100,7 @@ footer
   bottom: 0;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.93);
-grid-column: 1/3;
+  grid-column: 1/3;
 }
 
 #form1{
@@ -180,7 +182,7 @@ textarea{
     /* overflow: hidden; */
     text-align: center;
   	display: grid;
-  	grid-template-columns: repeat(4,1fr);
+  	grid-template-columns: repeat(5,1fr);
     padding-left: 0px;
     background-color: rgba(0, 0, 0, 0.93);
   }
@@ -198,6 +200,9 @@ textarea{
     font-size: 12px;
     background-color: rgba(0, 0, 0, 0.93);
   }
+
+
+
   .row {
     width: 100%;
     /* max-width: 940px; */
@@ -205,7 +210,7 @@ textarea{
     position: relative;
     padding: 0 0;
   	display: grid;
-  	grid-template-columns: 100px 150px 200px 1fr;
+  	grid-template-columns: 100px 1fr;
   	grid-template-rows: 1fr;
   }
 
@@ -237,6 +242,9 @@ textarea{
     margin-bottom: 20px;
     font-size: 17px;
     line-height: 2;
+  }
+  footer p{
+    margin-bottom: 0px;
   }
 
   .content {
@@ -284,6 +292,9 @@ textarea{
 	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   border: 1px solid black;
   grid-column: 1/3;
+}
+#getEmail{
+  grid-column: 1/2;
 }
 
 .signUp{
@@ -356,10 +367,5 @@ textarea{
 
       transform: translateY(20px);
     }
-
-}
-
-
-
 
 }

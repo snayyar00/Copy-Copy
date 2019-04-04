@@ -51,10 +51,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
         <nav>
           <ul>
-            <li><a href="#">About</a></li>
+            <li><a href="about.php">About</a></li>
+            <li><a href="document.php">Documentation</a></li>
             <li><a href="contact.php">Contact</a></li>
-            <li><a href="login.php" >Login</a></li>
-            <li><a href="Register.php">Sign Up</a></li>
+            <li><a href="login.php" id="login">Login</a></li>
+              <li><a href="Register.php">Sign Up</a></li>
           </ul>
         </nav>
 

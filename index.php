@@ -10,6 +10,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script src="main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
 </head>
 
@@ -23,10 +25,13 @@
 
       <nav>
         <ul>
-          <li><a href="About.php">About</a></li>
+
+          <li><a href="about.php">About</a></li>
+          <li><a href="document.php">Documentation</a></li>
           <li><a href="contact.php">Contact</a></li>
           <li><a href="login.php" id="login">Login</a></li>
-          <li><a href="Register.php">Sign Up</a></li>
+            <li><a href="Register.php">Sign Up</a></li>
+
         </ul>
       </nav>
 
@@ -61,14 +66,14 @@
       ini_set('display_errors', 1);
       error_reporting(E_ALL);
       require 'database.php';
-      require 'functions_template.php';
+
       global $pdo;
       $pdo=db_connect();
 
       session_start();
 
       if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-          echo "<h3>Welcome , " .$_SESSION['email']. "!</h3>";
+          echo "<h3>Welcome ,</h3><h3 id='getEmail'> " .$_SESSION['email']. "</h3>";
           $copiedText='';
 
 
@@ -133,7 +138,7 @@
 
         <textarea type="text" name="textCopy" rows="6" cols="40"></textarea>
         <br>
-        <input type="submit" value="submit" name="submit" />
+        <input type="submit" value="submit" name="submit" id="submitCopy" />
         <h4>Type the text you pasted</h4>
         <h5 id="paste" ></h4>
       </form>
